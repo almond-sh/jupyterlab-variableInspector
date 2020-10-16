@@ -174,17 +174,8 @@ export
 
             row = this._table.tFoot.insertRow();
 
-            // Add delete icon and onclick event
-            let cell = row.insertCell( 0 );
-            cell.innerHTML = "&#128465;";
-            cell.className = "jp-VarInspector-deleteButton";
-            cell.title = "Delete";
-            cell.onclick = ( ev: MouseEvent ): any => {
-                this.source.performDelete( name );
-            };
-            
             // Add name cell and onclick event for inspection
-            cell = row.insertCell( 1 );
+            let cell = row.insertCell( 0 );
             cell.innerHTML = name;
             
             if ( item.isMatrix ) {
@@ -199,13 +190,9 @@ export
             }
 
             // Add remaining cells
-            cell = row.insertCell( 2 );
+            cell = row.insertCell( 1 );
             cell.innerHTML = varType;
-            cell = row.insertCell( 3 );
-            cell.innerHTML = item.varSize;
-            cell = row.insertCell( 4 );
-            cell.innerHTML = item.varShape;
-            cell = row.insertCell( 5 );
+            cell = row.insertCell( 2 );
 
             const rendermime = this._source.rendermime;
             if (item.isWidget && rendermime) {
@@ -256,17 +243,11 @@ namespace Private {
         table.createTHead();
         let hrow = <HTMLTableRowElement>table.tHead.insertRow( 0 );
 
-        let cell1 = hrow.insertCell( 0 );
-        cell1.innerHTML = "";
-        let cell2 = hrow.insertCell( 1 );
+        let cell2 = hrow.insertCell( 0 );
         cell2.innerHTML = "Name";
-        let cell3 = hrow.insertCell( 2 );
+        let cell3 = hrow.insertCell( 1 );
         cell3.innerHTML = "Type";
-        let cell4 = hrow.insertCell( 3 );
-        cell4.innerHTML = "Size";
-        let cell5 = hrow.insertCell( 4 );
-        cell5.innerHTML = "Shape";
-        let cell6 = hrow.insertCell( 5 );
+        let cell6 = hrow.insertCell( 2 );
         cell6.innerHTML = "Content";
         return table;
     }
