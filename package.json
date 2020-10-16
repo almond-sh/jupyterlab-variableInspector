@@ -1,5 +1,5 @@
 {
-  "name": "@lckr/jupyterlab_variableinspector",
+  "name": "@almond-sh/jupyterlab_variableinspector",
   "version": "0.4.0",
   "description": "Variable inspector extension for JupyterLab",
   "keywords": [
@@ -8,7 +8,7 @@
     "jupyterlab-extension",
     "variable inspector"
   ],
-  "homepage": "https://github.com/lckr/jupyterlab-variableInspector",
+  "homepage": "https://github.com/almond-sh/jupyterlab-variableInspector",
   "bugs": {
     "url": "https://github.com/lckr/jupyterlab-variableInspector/issues"
   },
@@ -22,7 +22,7 @@
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lckr/jupyterlab-variableInspector.git"
+    "url": "https://github.com/almond-sh/jupyterlab-variableInspector.git"
   },
   "scripts": {
     "build": "tsc",
