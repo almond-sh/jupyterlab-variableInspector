@@ -7,8 +7,13 @@ This extension is a customized version of the original
 [jupyterlab_variableinspector](https://github.com/almond-sh/jupyterlab-variableInspector), that works with [Almond](https://github.com/almond-sh/almond).
 
 Install it with
-```
+```text
 $ jupyter labextension install @almond-sh/jupyterlab_variableinspector
 ```
 
-Then open the variable inspector panel from JupyterLab, by right-clicking in a cell, then "Open Variable Inspector".
+Then pass `--variable-inspector` as an option when installing Almond (>= `0.10.9`):
+```text
+$ cs launch almond -- --variable-inspector --install
+```
+
+Lastly, start JupyterLab, and open the variable inspector panel by right-clicking in a cell, then "Open Variable Inspector".
